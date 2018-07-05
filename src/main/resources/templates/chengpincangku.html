@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=10"> 
+  <title>成品仓库</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="../dist/css/ionicons.min.css">
+  <link rel="stylesheet" href="../dist/css/AdminLTE.css">
+  <link rel="stylesheet" href="../dist/css/skins/_all-skins.css">
+  <link rel="stylesheet" href="../vince/css/vince.css">
+  <link rel="stylesheet" href="../vince/biao/css/font-awesome.min.css">
+  <!--[if lt IE 9]>
+  <script src="../dist/js/html5shiv.min.js"></script>
+  <script src="../dist/js/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+
+
+
+<div class="wrapper">
+  <header class="main-header">
+    <a href="#" class="logo">
+      <span class="logo-mini">
+	  <img src="../vince/images/v01.png">
+	  </span>
+      <span class="logo-lg"><img src="../vince/images/v01.png">EMS</span>
+    </a>
+    <nav class="navbar navbar-static-top">
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button"></a>
+      <span class="all_title">能源管理监控系统</span>
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <li class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" >
+              <!-- <img src="../dist/img/user2-160x160.jpg" class="user-image" alt="User Image"> -->
+              <span class="hidden-xs">2016-9-13 16:12:14</span>
+            </a>
+            
+          </li>
+         
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <aside class="main-sidebar">
+    <section class="sidebar">
+     <!--  <div class="user-panel">
+        <div class="pull-left image">
+          <img src="../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>当前用户：管理员</p>
+		  <p class="menu_time">
+          时间：<span id="nowTime">2016-9-13 16:12:14</span></p>
+        </div>
+      </div> -->
+
+      <ul class="sidebar-menu">
+        <li class="header">菜单 MENU</li>
+        <li class="active">
+          <a href="index">
+            <i class="fa fa-home" style="font-size: 22px"></i> <span>首页</span>
+          </a>
+        </li>
+        <li >
+          <a href="chejian3d">
+            <i class="fa fa-eye" style="font-size: 22px"></i> <span>车间3D监控</span>
+          </a>
+        </li>
+        <li >
+          <a href="monitoring">
+            <i class="fa fa-video-camera" style="font-size: 22px"></i> <span>监控电</span>
+          </a>
+        </li>
+        <li >
+          <a href="lighting">
+            <i class="fa fa-fire" style="font-size: 22px"></i> <span>照明</span>
+          </a>
+        </li>
+        <li>
+          <a href="yuanliaocangku">
+            <i class="fa fa-sliders"></i> <span>原料仓库</span>
+          </a>
+        </li>
+        <li>
+          <a href="chengpincangku">
+            <i class="fa fa-map" ></i> <span>成品仓库</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-gears"></i>
+            <span>生产车间</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="left_workshop"><i class="fa fa-bookmark"></i> 左车间动力</a></li>
+            <li><a href="right_workshop"><i class="fa fa-bookmark"></i> 右车间动力</a></li>
+            <li><a href="left_wkshop_vrv"><i class="fa fa-bookmark"></i> 左车间空调</a></li>
+            <li><a href="maintenance_room"><i class="fa fa-bookmark"></i> 维修室动力</a></li>
+            <li><a href="pack_glue_room"><i class="fa fa-bookmark"></i> 包胶间动力</a></li>
+            <li><a href="handl_temp_test"><i class="fa fa-bookmark"></i> 高低温试验区</a></li>
+            <li><a href="production_line1"><i class="fa fa-bookmark"></i> SMT产线1</a></li>
+            <li><a href="production_line2"><i class="fa fa-bookmark"></i> SMT产线2</a></li>
+            <li><a href="can_seamer_room"><i class="fa fa-bookmark"></i> 封罐间</a></li>
+            <li><a href="thermostatic_chamber"><i class="fa fa-bookmark"></i> 恒温室</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-laptop"></i>
+            <span>办公室</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="workshop_office"><i class="fa fa-bookmark"></i> 办公室空调</a></li>
+            <li><a href="technology_office"><i class="fa fa-bookmark"></i> 技术部办公室</a></li>
+            <li><a href="east_office"><i class="fa fa-bookmark"></i> 1、2楼东办公室</a></li>
+            <li><a href="second_floor_workshop"><i class="fa fa-bookmark"></i> 车间2楼动力</a></li>
+            <li><a href="production_office"><i class="fa fa-bookmark"></i> 生产办公室</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-magnet"></i>
+            <span>环保除异味系统</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="#"><i class="fa fa-bookmark"></i>环保除异味组态监控</a></li>
+            <li><a href="huanbao3d"><i class="fa fa-bookmark"></i>环保除异味3D监控</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </section>
+  </aside>
+  <div class="content-wrapper">
+   <!--  <section class="content-header"> 
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> 首页</a></li>
+        
+      </ol>
+    </section> -->
+    <div class="content qqq">
+    <div class="rezone">
+      <div class="nei">
+
+        <div class="ssjc_ru_table1">
+          <div class="echarts1" id="echarts1">
+          </div>
+
+          <div class="echarts2" id="echarts2">
+          </div>
+          <div class="echarts3" id="echarts3">
+          </div>
+
+          <div class="echarts4" id="echarts4">
+          </div>
+
+
+        </div>
+      </div>
+
+
+</div></div></div>
+
+  <div class="control-sidebar-bg"></div>
+</div>
+<script src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<script src="../dist/js/app.min.js"></script>
+
+<script src="../vince/js/nicescroll.js"></script>
+<script src="../vince/drag/zxx.drag.1.0.js"></script>
+<script src="../dist/js/demo.js"></script>
+<script src="../vince/js/demoCh.js"></script>
+
+<div id="sss" style="display:none;height:200px;width:200px;"></div>
+<script src="../vince/js/echarts.min.js"></script>
+  <script type="text/javascript">
+      var data1 = [];
+      var data2 = [];
+      var data3 = [];
+      var data4 = [];
+      $(function(){
+          $.ajax({
+              type: "POST",
+              url: "left_workshop/queryByParams",
+              success: function(msg){
+                  msg.forEach(function(item,index){
+                      var now = new Date(item.timestamp);
+                        data1.push({name:now.toString(),
+                             value: [[now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/')+" "+[now.getHours(), now.getMinutes(), now.getSeconds()].join(':'),item.voltage_a]});
+                         data2.push({name:now.toString(),
+                             value: [[now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/')+" "+[now.getHours(), now.getMinutes(), now.getSeconds()].join(':'),item.electric_a]});
+                      data3.push({name:now.toString(),
+                          value: [[now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/')+" "+[now.getHours(), now.getMinutes(), now.getSeconds()].join(':'),item.voltage_a]});
+                      data4.push({name:now.toString(),
+                          value: [[now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/')+" "+[now.getHours(), now.getMinutes(), (now.getSeconds())].join(':'),item.electric_a]});
+                  })
+
+                  myChart1.setOption(option1);
+                  myChart2.setOption(option2);
+                  myChart3.setOption(option3);
+                  myChart4.setOption(option4);
+              }
+          })
+      })
+      /* 第一个图 */
+      var myChart1 = echarts.init(document.getElementById('echarts1'));
+      option1 = {
+          title: {
+              text: '  电能质量分析',
+              textStyle:{
+                  color:'#fff',
+                  fontSize:14,
+                  fontWeight:'normal'},
+              padding:13},
+          legend: {
+              bottom: '2%',
+              data: ['电压']},
+          textStyle:{color:'#fff'},
+          tooltip: {
+              trigger: 'axis',
+              formatter: '{a} <br/>{c}',
+              axisPointer: {
+                  animation: false
+              },
+          },
+
+
+          xAxis: {
+              type: 'time',
+              splitLine: {
+                  show: true,
+                  lineStyle: {
+                      color: 'rgba(43,46,56,0.8)'
+                  }
+              },
+          },
+
+
+          yAxis: {
+              axisLabel: {
+                  formatter: '{value} V'
+              },
+              boundaryGap: ['20%', '20%'],
+              splitLine: {
+                  show: true,
+                  lineStyle:{
+                      color:'rgba(43,46,56,0.8)'}},
+              scale:true},
+
+
+
+          grid: {
+              top:'13%',
+              left: '3%',
+              right: '4%',
+              bottom: '15%',
+              containLabel: true},
+
+          legend: {
+              orient: 'horizontal',
+              right:'3%',
+              top:'3%',
+              data:['电压'],
+              textStyle:{color:'#fff'}},
+
+          series: [
+              {
+                  name: '电压',
+                  type: 'line',
+                  data: data1,
+                  showSymbol: false,
+                  hoverAnimation: false,
+
+                  lineStyle:{normal:{color:'#ff6b6b'}}}]}
+      myChart1.setOption(option1);
+
+
+      /* 第二个图 */
+      var myChart2 = echarts.init(document.getElementById('echarts2'));
+      option2 = {
+          title: {
+              text: '  电能质量分析',
+              textStyle:{
+                  color:'#fff',
+                  fontSize:14,
+                  fontWeight:'normal'},
+              padding:13},
+          legend: {
+              bottom: '2%',
+              data: ['电流']},
+          textStyle:{color:'#fff'},
+          tooltip: {
+              trigger: 'axis',
+              formatter: '{a} <br/>{c}',
+              axisPointer: {
+                  animation: false
+              },
+          },
+          xAxis: {
+              type: 'time',
+              splitLine: {
+                  show: true,
+                  lineStyle: {
+                      color: 'rgba(43,46,56,0.8)'
+                  }
+              },
+          },
+          yAxis: {
+              axisLabel: {
+                  formatter: '{value}A'
+              },
+              boundaryGap: ['20%', '20%'],
+              splitLine: {
+                  show: true,
+                  lineStyle:{
+                      color:'rgba(43,46,56,0.8)'}},
+              scale:true},
+          grid: {
+              top:'13%',
+              left: '3%',
+              right: '4%',
+              bottom: '15%',
+              containLabel: true},
+
+          legend: {
+              orient: 'horizontal',
+              right:'3%',
+              top:'3%',
+              data:['电流'],
+              textStyle:{color:'#fff'}},
+
+          series: [
+              {
+                  name: '电流',
+                  type: 'line',
+                  data: data2,
+                  showSymbol: false,
+                  hoverAnimation: false,
+
+                  lineStyle:{normal:{color:'#55c45f'}}}]};
+      myChart2.setOption(option2);
+
+      /* 第三个图 */
+      var myChart3 = echarts.init(document.getElementById('echarts3'));
+      option3 = {
+          title: {
+              text: '  电能质量分析',
+              textStyle:{
+                  color:'#fff',
+                  fontSize:14,
+                  fontWeight:'normal'},
+              padding:13},
+          legend: {
+              bottom: '2%',
+              data: ['电压']},
+          textStyle:{color:'#fff'},
+          tooltip: {
+              trigger: 'axis',
+              formatter: '{a} <br/>{c}',
+              axisPointer: {
+                  animation: false
+              },
+          },
+
+
+          xAxis: {
+              type: 'time',
+              splitLine: {
+                  show: true,
+                  lineStyle: {
+                      color: 'rgba(43,46,56,0.8)'
+                  }
+              },
+          },
+
+
+          yAxis: {
+              axisLabel: {
+                  formatter: '{value} V'
+              },
+              boundaryGap: ['20%', '20%'],
+              splitLine: {
+                  show: true,
+                  lineStyle:{
+                      color:'rgba(43,46,56,0.8)'}},
+              scale:true},
+
+
+
+          grid: {
+              top:'13%',
+              left: '3%',
+              right: '4%',
+              bottom: '15%',
+              containLabel: true},
+
+          legend: {
+              orient: 'horizontal',
+              right:'3%',
+              top:'3%',
+              data:['电压'],
+              textStyle:{color:'#fff'}},
+
+          series: [
+              {
+                  name: '电压',
+                  type: 'line',
+                  data: data1,
+                  showSymbol: false,
+                  hoverAnimation: false,
+
+                  lineStyle:{normal:{color:'#ff6b6b'}}}]}
+      myChart3.setOption(option3);
+
+
+      /* 第四个图 */
+      var myChart4 = echarts.init(document.getElementById('echarts4'));
+      option4 = {
+          title: {
+              text: '  电能质量分析',
+              textStyle:{
+                  color:'#fff',
+                  fontSize:14,
+                  fontWeight:'normal'},
+              padding:13},
+          legend: {
+              bottom: '2%',
+              data: ['电流']},
+          textStyle:{color:'#fff'},
+          tooltip: {
+              trigger: 'axis',
+              formatter: '{a} <br/>{c}',
+              axisPointer: {
+                  animation: false
+              },
+          },
+          xAxis: {
+              type: 'time',
+              splitLine: {
+                  show: true,
+                  lineStyle: {
+                      color: 'rgba(43,46,56,0.8)'
+                  }
+              },
+          },
+          yAxis: {
+              axisLabel: {
+                  formatter: '{value}A'
+              },
+              boundaryGap: ['20%', '20%'],
+              splitLine: {
+                  show: true,
+                  lineStyle:{
+                      color:'rgba(43,46,56,0.8)'}},
+              scale:true},
+          grid: {
+              top:'13%',
+              left: '3%',
+              right: '4%',
+              bottom: '15%',
+              containLabel: true},
+
+          legend: {
+              orient: 'horizontal',
+              right:'3%',
+              top:'3%',
+              data:['电流'],
+              textStyle:{color:'#fff'}},
+
+          series: [
+              {
+                  name: '电流',
+                  type: 'line',
+                  data: data2,
+                  showSymbol: false,
+                  hoverAnimation: false,
+
+                  lineStyle:{normal:{color:'#55c45f'}}}]};
+      myChart4.setOption(option4);
+      window.addEventListener("resize",function(){
+          myChart1.resize();
+          myChart2.resize();
+          myChart3.resize();
+          myChart4.resize();
+      });
+      setInterval(function () {
+          $.ajax({
+              type: "POST",
+              url: "left_workshop/queryByParams",
+              success: function(msg){
+                msg.forEach(function(item,index){
+                    var now = new Date(item.timestamp);
+                    data1.shift();
+                 data1.push({name:now.toString(),
+                       value: [[now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/')+" "+[now.getHours(), now.getMinutes(), now.getSeconds()].join(':'),item.voltage_a]});
+                    data2.shift();
+                 data2.push({name:now.toString(),
+                        value: [[now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/')+" "+[now.getHours(), now.getMinutes(), now.getSeconds()].join(':'),item.electric_a]});
+                    data3.shift();
+                    data3.push({name:now.toString(),
+                        value: [[now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/')+" "+[now.getHours(), now.getMinutes(), now.getSeconds()].join(':'),item.voltage_a]});
+                    data4.shift();
+                    data4.push({name:now.toString(),
+                        value: [[now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/')+" "+[now.getHours(), now.getMinutes(), now.getSeconds()].join(':'),item.electric_a]});
+                })
+              }
+          })
+
+          myChart1.setOption({
+              series: [{
+                  data: data1
+              }]
+          });
+          myChart2.setOption({
+              series: [{
+                  data: data2
+              }]
+          });
+          myChart3.setOption({
+              series: [{
+                  data: data3
+              }]
+          });
+          myChart4.setOption({
+              series: [{
+                  data: data4
+              }]
+          });
+          myChart1.resize();
+          myChart2.resize();
+          myChart3.resize();
+          myChart4.resize();
+      }, 1000);
+
+      // 电能质量分析页面图标切换
+
+
+
+
+  </script>
+</body>
+</html>

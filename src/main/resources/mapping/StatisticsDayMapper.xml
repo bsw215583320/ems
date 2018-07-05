@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lanbao.ems.mapper.StatisticsDayMapper" >
+    <insert id="save" parameterType="com.lanbao.ems.model.StatisticsDay">
+        insert into statistics_day(
+        id
+        <if test="timestamp!=null and timestamp!=''">,timestamp</if>
+        <if test="circuit!=null and circuit!=''">,circuit</if>
+        <if test="active!=null and active!=''">,active</if>
+        <if test="reactive!=null and reactive!=''">,reactive</if>
+        <if test="remark!=null and remark!=''">,remark</if>
+        ) values(
+        #{id,jdbcType=VARCHAR}
+        <if test="timestamp!=null and timestamp!=''">,#{timestamp,jdbcType=TIMESTAMP}</if>
+        <if test="circuit!=null and circuit!=''">,#{circuit,jdbcype=VARCHAR}</if>
+        <if test="active!=null and active!=''">,#{active,jdbcype=NUMERIC}</if>
+        <if test="reactive!=null and reactive!=''">,#{reactive,jdbcype=NUMERIC}</if>
+        <if test="remark!=null and remark!=''">,#{remark,jdbcype=VARCHAR}</if>
+        )
+    </insert>
+
+    <select id="selectById" resultType="com.lanbao.ems.model.StatisticsDay">
+        select * from statistics_day where id = #{id,jdbcType=VARCHAR}
+    </select>
+
+    <update id="updateById" parameterType="com.lanbao.ems.model.StatisticsDay">
+        update statistics_day set
+        <if test="timestamp!=null and timestamp!=''">timestamp = #{timestamp,jdbcType=TIMESTAMP},</if>
+        <if test="circuit!=null and circuit!=''">circuit = #{circuit,jdbcype=VARCHAR},</if>
+        <if test="active!=null and active!=''">active = #{active,jdbcype=NUMERIC},</if>
+        <if test="reactive!=null and reactive!=''">reactive = #{reactive,jdbcype=NUMERIC},</if>
+        <if test="remark!=null and remark!=''">remark = #{remark,jdbcype=VARCHAR},</if>
+        where id = #{id,jdbcType=VARCHAR}
+    </update>
+
+    <delete id="deleteById">
+        delete from statistics_day where id = #{id,jdbcType=VARCHAR}
+    </delete>
+
+    <select id="queryAll" resultType="com.lanbao.ems.model.StatisticsDay">
+        select * from statistics_day
+    </select>
+
+    <select id="queryByParams" parameterType="com.lanbao.ems.model.StatisticsDay" resultType="com.lanbao.ems.model.StatisticsDay">
+        select * from statistics_day where timestamp between #{stime,jdbcType=TIMESTAMP} and #{etime,jdbcType=TIMESTAMP}
+    </select>
+</mapper>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lanbao.ems.mapper.UserMapper" >
+    <insert id="save" parameterType="com.lanbao.ems.model.User">
+        insert into "T_USER"(
+        id
+        <if test="name!=null and name!=''">,name</if>
+        <if test="password!=null and password!=''">,password</if>
+        <if test="code!=null and code!=''">,code</if>
+        ) values(
+        #{id,jdbcType=VARCHAR}
+        <if test="name!=null and name!=''">,#{name,jdbcType=VARCHAR}</if>
+        <if test="password!=null and password!=''">,#{password,jdbcype=VARCHAR}</if>
+        <if test="code!=null and code!=''">,#{code,jdbcType=VARCHAR}</if>
+        )
+    </insert>
+
+    <select id="selectById" resultType="com.lanbao.ems.model.User">
+        select * from "T_USER" where id = #{id,jdbcType=VARCHAR}
+    </select>
+
+    <update id="updateById" parameterType="com.lanbao.ems.model.User">
+        update "T_USER" set
+        <if test="name!=null and name!=''">username = #{userName,jdbcType=VARCHAR},</if>
+        <if test="password!=null and password!=''">password = #{password,jdbcype=VARCHAR},</if>
+        <if test="code!=null and code!=''">code = #{code,jdbcType=VARCHAR}</if>
+        where id = #{id,jdbcType=VARCHAR}
+    </update>
+
+    <delete id="deleteById">
+        delete from "T_USER" where id = #{id,jdbcType=VARCHAR}
+    </delete>
+
+    <select id="queryAll" resultType="com.lanbao.ems.model.User">
+        select * from "T_USER"
+    </select>
+</mapper>

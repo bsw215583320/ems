@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lanbao.ems.mapper.WorkShopMapper" >
+    <insert id="save" parameterType="com.lanbao.ems.model.WorkShop">
+        insert into workshop(
+        id
+        <if test="timestamp!=null and timestamp!=''">,timestamp</if>
+        <if test="voltage!=null and voltage!=''">,voltage</if>
+        <if test="electricity!=null and electricity!=''">,electricity</if>
+        <if test="temperature!=null and temperature!=''">,temperature</if>
+        ) values(
+        #{id,jdbcType=VARCHAR}
+        <if test="timestamp!=null and timestamp!=''">,#{timestamp,jdbcType=TIMESTAMP}</if>
+        <if test="voltage!=null and voltage!=''">,#{voltage,jdbcype=NUMERIC}</if>
+        <if test="electricity!=null and electricity!=''">,#{electricity,jdbcType=NUMERIC}</if>
+        <if test="temperature!=null and temperature!=''">,#{temperature,jdbcType=NUMERIC}</if>
+        )
+    </insert>
+
+    <select id="selectById" resultType="com.lanbao.ems.model.WorkShop">
+        select * from workshop where id = #{id,jdbcType=VARCHAR}
+    </select>
+
+    <update id="updateById" parameterType="com.lanbao.ems.model.WorkShop">
+        update workshop set
+        <if test="timestamp!=null and timestamp!=''">timestamp = #{timestamp,jdbcType=TIMESTAMP},</if>
+        <if test="voltage!=null and voltage!=''">voltage = #{voltage,jdbcype=NUMERIC},</if>
+        <if test="electricity!=null and electricity!=''">electricity = #{electricity,jdbcType=NUMERIC}</if>
+        <if test="temperature!=null and temperature!=''">temperature = #{temperature,jdbcType=NUMERIC}</if>
+        where id = #{id,jdbcType=VARCHAR}
+    </update>
+
+    <delete id="deleteById">
+        delete from workshop where id = #{id,jdbcType=VARCHAR}
+    </delete>
+
+    <select id="queryAll" resultType="com.lanbao.ems.model.WorkShop">
+        select * from workshop
+    </select>
+
+    <select id="queryByParams" parameterType="com.lanbao.ems.model.WorkShop" resultType="com.lanbao.ems.model.WorkShop">
+        select * from workshop where timestamp between #{stime,jdbcType=TIMESTAMP} and #{etime,jdbcType=TIMESTAMP}
+    </select>
+</mapper>

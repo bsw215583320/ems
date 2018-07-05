@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lanbao.ems.mapper.LightingMapper" >
+    <insert id="save" parameterType="com.lanbao.ems.model.Lighting">
+        insert into lighting(
+        id
+        <if test="timestamp!=null and timestamp!=''">,timestamp</if>
+        <if test="voltage_a!=null and voltage_a!=''">,voltage_a</if>
+        <if test="voltage_b!=null and voltage_b!=''">,voltage_b</if>
+        <if test="voltage_c!=null and voltage_c!=''">,voltage_c</if>
+        <if test="electric_a!=null and electric_a!=''">,electric_a</if>
+        <if test="electric_b!=null and electric_b!=''">,electric_b</if>
+        <if test="electric_c!=null and electric_c!=''">,electric_c</if>
+        <if test="total_active_power!=null and total_active_power!=''">,total_active_power</if>
+        <if test="total_reactive_power!=null and total_reactive_power!=''">,total_reactive_power</if>
+        <if test="total_apparent_power!=null and total_apparent_power!=''">,total_apparent_power</if>
+        <if test="total_power_factor!=null and total_power_factor!=''">,total_power_factor</if>
+        <if test="total_harmonic_distortion!=null and total_harmonic_distortion!=''">,total_harmonic_distortion</if>
+        <if test="io_active_power!=null and io_active_power!=''">,io_active_power</if>
+        <if test="io_reactive_power!=null and io_reactive_power!=''">,io_reactive_power</if>
+        ) values(
+        #{id,jdbcType=VARCHAR}
+        <if test="timestamp!=null and timestamp!=''">,#{timestamp,jdbcType=TIMESTAMP}</if>
+        <if test="voltage_a!=null and voltage_a!=''">,#{voltage_a,jdbcype=NUMERIC}</if>
+        <if test="voltage_b!=null and voltage_b!=''">,#{voltage_b,jdbcype=NUMERIC}</if>
+        <if test="voltage_c!=null and voltage_c!=''">,#{voltage_c,jdbcype=NUMERIC}</if>
+        <if test="electric_a!=null and electric_a!=''">,#{electric_a,jdbcType=NUMERIC}</if>
+        <if test="electric_b!=null and electric_b!=''">,#{electric_b,jdbcType=NUMERIC}</if>
+        <if test="electric_c!=null and electric_c!=''">,#{electric_c,jdbcType=NUMERIC}</if>
+        <if test="total_active_power!=null and total_active_power!=''">,#{total_active_power,jdbcType=NUMERIC}</if>
+        <if test="total_reactive_power!=null and total_reactive_power!=''">,#{total_reactive_power,jdbcType=NUMERIC}</if>
+        <if test="total_apparent_power!=null and total_apparent_power!=''">,#{total_apparent_power,jdbcType=NUMERIC}</if>
+        <if test="total_power_factor!=null and total_power_factor!=''">,#{total_power_factor,jdbcType=NUMERIC}</if>
+        <if test="total_harmonic_distortion!=null and total_harmonic_distortion!=''">,#{total_harmonic_distortion,jdbcType=NUMERIC}</if>
+        <if test="io_active_power!=null and io_active_power!=''">,#{io_active_power,jdbcType=NUMERIC}</if>
+        <if test="io_reactive_power!=null and io_reactive_power!=''">,#{io_reactive_power,jdbcType=NUMERIC}</if>
+        )
+    </insert>
+
+    <select id="selectById" resultType="com.lanbao.ems.model.Lighting">
+        select * from lighting where id = #{id,jdbcType=VARCHAR}
+    </select>
+
+    <update id="updateById" parameterType="com.lanbao.ems.model.Lighting">
+        update lighting set
+        <if test="timestamp!=null and timestamp!=''">timestamp = #{timestamp,jdbcType=TIMESTAMP},</if>
+        <if test="voltage_a!=null and voltage_a!=''">voltage_a = #{voltage_a,jdbcype=NUMERIC},</if>
+        <if test="voltage_b!=null and voltage_b!=''">voltage_b = #{voltage_b,jdbcype=NUMERIC},</if>
+        <if test="voltage_c!=null and voltage_c!=''">voltage_c = #{voltage_c,jdbcype=NUMERIC},</if>
+        <if test="electric_a!=null and electric_a!=''">electric_a = #{electric_a,jdbcType=NUMERIC}</if>
+        <if test="electric_b!=null and electric_b!=''">electric_b = #{electric_b,jdbcType=NUMERIC}</if>
+        <if test="electric_c!=null and electric_c!=''">electric_c = #{electric_c,jdbcType=NUMERIC}</if>
+        <if test="total_active_power!=null and total_active_power!=''">total_active_power = #{total_active_power,jdbcType=NUMERIC}</if>
+        <if test="total_reactive_power!=null and total_reactive_power!=''">total_reactive_power= #{total_reactive_power,jdbcType=NUMERIC}</if>
+        <if test="total_apparent_power!=null and total_apparent_power!=''">total_apparent_power= #{total_apparent_power,jdbcType=NUMERIC}</if>
+        <if test="total_power_factor!=null and total_power_factor!=''">total_power_factor = #{total_power_factor,jdbcType=NUMERIC}</if>
+        <if test="total_harmonic_distortion!=null and total_harmonic_distortion!=''">total_harmonic_distortion = #{total_harmonic_distortion,jdbcType=NUMERIC}</if>
+        <if test="io_active_power!=null and io_active_power!=''">io_active_power = #{io_active_power,jdbcType=NUMERIC}</if>
+        <if test="io_reactive_power!=null and io_reactive_power!=''">io_reactive_power = #{io_reactive_power,jdbcType=NUMERIC}</if>
+        where id = #{id,jdbcType=VARCHAR}
+    </update>
+
+    <delete id="deleteById">
+        delete from lighting where id = #{id,jdbcType=VARCHAR}
+    </delete>
+
+    <select id="queryAll" resultType="com.lanbao.ems.model.Lighting">
+        select * from lighting
+    </select>
+
+    <select id="queryByParams" parameterType="com.lanbao.ems.model.Lighting" resultType="com.lanbao.ems.model.Lighting">
+        select * from lighting where timestamp between #{stime,jdbcType=TIMESTAMP} and #{etime,jdbcType=TIMESTAMP}
+    </select>
+</mapper>

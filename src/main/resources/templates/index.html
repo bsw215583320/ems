@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=10"> 
+  <title>首页</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="../dist/css/ionicons.min.css">
+  <link rel="stylesheet" href="../dist/css/AdminLTE.css">
+  <link rel="stylesheet" href="../dist/css/skins/_all-skins.css">
+  <link rel="stylesheet" href="../vince/css/vince.css">
+  <link rel="stylesheet" href="../vince/biao/css/font-awesome.min.css">
+  <!--[if lt IE 9]>
+  <script src="../dist/js/html5shiv.min.js"></script>
+  <script src="../dist/js/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+
+
+
+<div class="fuceng">
+  <div class="fuqu" id="box">
+    <div class="fuquzone">
+      <div class="fuqulogo" id="bar1">
+        
+      </div>
+      <p class="fuqutitle" id="bar">
+        <span class="fuclose">×</span>
+      </p>
+    
+
+  <div class="fuqusave">
+      <input type="button" value="保存">
+  </div></div></div></div>
+<div class="wrapper">
+  <header class="main-header">
+    <a href="#" class="logo">
+      <span class="logo-mini">
+	  <img src="../vince/images/v01.png">
+	  </span>
+      <span class="logo-lg"><img src="../vince/images/v01.png">EMS</span>
+    </a>
+    <nav class="navbar navbar-static-top">
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button"></a>
+      <span class="all_title">能源管理监控系统</span>
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <li class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" >
+              <!-- <img src="../dist/img/user2-160x160.jpg" class="user-image" alt="User Image"> -->
+              <span class="hidden-xs">2016-9-13 16:12:14</span>
+            </a>
+            
+          </li>
+         
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <aside class="main-sidebar">
+    <section class="sidebar">
+     <!--  <div class="user-panel">
+        <div class="pull-left image">
+          <img src="../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>当前用户：管理员</p>
+		  <p class="menu_time">
+          时间：<span id="nowTime">2016-9-13 16:12:14</span></p>
+        </div>
+      </div> -->
+
+      <ul class="sidebar-menu">
+        <li class="header">菜单 MENU</li>
+        <li class="active">
+          <a href="index">
+            <i class="fa fa-home" style="font-size: 22px"></i> <span>首页</span>
+          </a>
+        </li>
+        <li >
+          <a href="chejian3d">
+            <i class="fa fa-eye" style="font-size: 22px"></i> <span>车间3D监控</span>
+          </a>
+        </li>
+        <li >
+          <a href="monitoring">
+            <i class="fa fa-video-camera" style="font-size: 22px"></i> <span>监控电</span>
+          </a>
+        </li>
+        <li >
+          <a href="lighting">
+            <i class="fa fa-fire" style="font-size: 22px"></i> <span>照明</span>
+          </a>
+        </li>
+      	 <li>
+          <a href="yuanliaocangku">
+            <i class="fa fa-sliders"></i> <span>原料仓库</span>
+          </a>
+        </li>
+        <li>
+          <a href="chengpincangku">
+            <i class="fa fa-map" ></i> <span>成品仓库</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-gears"></i>
+            <span>生产车间</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="left_workshop"><i class="fa fa-bookmark"></i> 左车间动力</a></li>
+            <li><a href="right_workshop"><i class="fa fa-bookmark"></i> 右车间动力</a></li>
+            <li><a href="left_wkshop_vrv"><i class="fa fa-bookmark"></i> 左车间空调</a></li>
+            <li><a href="maintenance_room"><i class="fa fa-bookmark"></i> 维修室动力</a></li>
+            <li><a href="pack_glue_room"><i class="fa fa-bookmark"></i> 包胶间动力</a></li>
+            <li><a href="handl_temp_test"><i class="fa fa-bookmark"></i> 高低温试验区</a></li>
+            <li><a href="production_line1"><i class="fa fa-bookmark"></i> SMT产线1</a></li>
+            <li><a href="production_line2"><i class="fa fa-bookmark"></i> SMT产线2</a></li>
+            <li><a href="can_seamer_room"><i class="fa fa-bookmark"></i> 封罐间</a></li>
+            <li><a href="thermostatic_chamber"><i class="fa fa-bookmark"></i> 恒温室</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-laptop"></i>
+            <span>办公室</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="workshop_office"><i class="fa fa-bookmark"></i> 办公室空调</a></li>
+            <li><a href="technology_office"><i class="fa fa-bookmark"></i> 技术部办公室</a></li>
+            <li><a href="east_office"><i class="fa fa-bookmark"></i> 1、2楼东办公室</a></li>
+            <li><a href="second_floor_workshop"><i class="fa fa-bookmark"></i> 车间2楼动力</a></li>
+            <li><a href="production_office"><i class="fa fa-bookmark"></i> 生产办公室</a></li>
+          </ul>
+        </li>
+         <li class="treeview">
+          <a href="#">
+            <i class="fa fa-magnet"></i>
+            <span>环保除异味系统</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="#"><i class="fa fa-bookmark"></i>环保除异味组态监控</a></li>
+            <li><a href="huanbao3d"><i class="fa fa-bookmark"></i>环保除异味3D监控</a></li>
+          </ul>
+        </li>
+      
+      </ul>
+    </section>
+  </aside>
+  <div class="content-wrapper">
+
+
+      <div class="content qqq">
+        <div class="ssjc">
+          <div class="row">
+
+            <div class="col-md-12 ssjc_right">
+
+              <div class="xyfagl_right_up">
+
+                <div class="xyfagl_one">
+                  <div class="row">
+                    <div class="col-md-5">
+                      <div class="echartsPie" id="echartsPie" style="height: 329px"></div>
+                      </div>
+                    <div class="col-md-7">
+                      <div class="xyfagl_one_right" id="xyfagl_one_right"  style="height: 329px;">
+                      </div></div></div></div></div>
+              <div class="echarts_two">
+
+                    <div class="col-md-10" >
+                      <div class="echarts_xyxgpj_two" id="echarts_xyxgpj_two" style="height: 350px"></div>
+                    </div>
+                    <div class="col-md-2">
+                      <div id="echartsTemp"  style="height: 164px;border-left: 10px solid #000;"></div>
+                      <div id="echartsHum" style="height: 185px;border-top: 10px solid #000;border-left:10px solid #000;"></div>
+                    </div></div>
+            <!--  <div class="echarts_two">
+
+                <div col-md-9>
+                  <div class="echarts_xyxgpj_two" id="echarts_xyxgpj_two"></div>
+                </div>
+                <div col-md-3>
+                    <div id="echartsTemp"></div>
+                    <div id="echartsHum"></div>
+                </div>
+              </div>-->
+
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+<script src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<script src="../dist/js/app.min.js"></script>
+
+<script src="../vince/js/nicescroll.js"></script>
+<script src="../vince/drag/zxx.drag.1.0.js"></script>
+<script src="../dist/js/demo.js"></script>
+<script src="../vince/js/demo.js"></script>
+
+<div id="sss" style="display:none;height:200px;width:200px;"></div>
+<script src="../vince/js/echarts.min.js"></script>
+<script type="text/javascript">
+/* var myChart1 = echarts.init(document.getElementById('sss'));
+option1 = {
+series: [{data: [247, 179]}]};
+myChart1.setOption(option1); */
+$(function(){
+
+    echartsPie = echarts.init(document.getElementById('echartsPie'));
+    echartsPie.setOption(optionPie);
+    echartsBar.setOption(optionBar);
+    myChart1.setOption(option1);
+    humChart.setOption(humOption);
+    tempChart.setOption(tempOption);
+    window.timerTaskFunction2=setInterval('reflashDate()',1000);
+    $.ajax({
+        type: "POST",
+        url: "left_workshop/queryByParams",
+        success: function(msg){
+            msg.forEach(function(item,index){
+                var now = new Date(item.timestamp);
+                data1.push({name:now.toString(),
+                    value: [[now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/')+" "+[now.getHours(), now.getMinutes(), (now.getSeconds()<10?"0"+now.getSeconds():now.getSeconds())].join(':'),item.voltage_a]});
+            })
+
+            myChart1.setOption(option1);
+        }
+    })
+});
+
+Date.prototype.Format = function (fmt) { // author: meizz
+    var o = {
+        "M+": this.getMonth() + 1, // 月份
+        "d+": this.getDate(), // 日
+        "h+": this.getHours(), // 小时
+        "m+": this.getMinutes(), // 分
+        "s+": this.getSeconds(), // 秒
+        "q+": Math.floor((this.getMonth() + 3) / 3), // 季度
+        "S": this.getMilliseconds() // 毫秒
+    };
+    if (/(y+)/.test(fmt))
+        fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+    for (var k in o)
+        if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+            return fmt;
+}
+var data1 = [];
+
+function reflashDate(){
+	var time2 = new Date().Format("yyyy-MM-dd hh:mm:ss");
+	$(".hidden-xs").html(time2);
+}
+var tempChart = echarts.init(document.getElementById('echartsTemp'));
+var humChart = echarts.init(document.getElementById('echartsHum'));
+var echartsBar = echarts.init(document.getElementById('echarts_xyxgpj_two'));
+/* 第一个图 */
+var  myChart1 = echarts.init(document.getElementById('xyfagl_one_right'));
+option1 = {
+    title: {
+        text: '  电能质量分析',
+        textStyle:{
+            color:'#fff',
+            fontSize:14,
+            fontWeight:'normal'},
+        padding:13},
+    legend: {
+        bottom: '2%',
+        data: ['电压']},
+    textStyle:{color:'#fff'},
+    tooltip: {
+        trigger: 'axis',
+        formatter: '{a} <br/>{c}',
+        axisPointer: {
+            animation: false
+        },
+    },
+
+
+    xAxis: {
+        type: 'time',
+        splitLine: {
+            show: true,
+            lineStyle: {
+                color: 'rgba(43,46,56,0.8)'
+            }
+        },
+    },
+
+
+    yAxis: {
+        axisLabel: {
+            formatter: '{value} V'
+        },
+        boundaryGap: ['20%', '20%'],
+        splitLine: {
+            show: true,
+            lineStyle:{
+                color:'rgba(43,46,56,0.8)'}},
+        scale:true},
+
+
+
+    grid: {
+        top:'13%',
+        left: '3%',
+        right: '4%',
+        bottom: '8%',
+        containLabel: true},
+
+    legend: {
+        orient: 'horizontal',
+        right:'3%',
+        top:'3%',
+        data:['电压'],
+        textStyle:{color:'#fff'}},
+
+    series: [
+        {
+            name: '电压',
+            type: 'line',
+            data: data1,
+            showSymbol: false,
+            hoverAnimation: false,
+
+            lineStyle:{normal:{color:'#ff6b6b'}}}]}
+
+
+var echartsPie;
+var data = genData(50);
+
+tempOption = {
+    tooltip : {
+        formatter: "{a} <br/>{b} : {c}%"
+    },
+    textStyle:{color:'#fff'},
+    series: [
+        {
+            name: '业务指标',
+            type: 'gauge',
+            max: 40,
+            title: {
+                offsetCenter:[0,-25],
+                color:'#fff'
+            },
+            detail: {formatter:'{value}℃',
+              fontSize: 15},
+            data: [{value: 25, name: '温度'}],
+            axisLine: {
+                lineStyle: {
+                    width:7
+                }
+            },
+            axisTick:{
+                length: 5
+            },
+            radius: '85%',
+            pointer: {
+                length: 40,
+                width: 3
+            },
+            splitLine: {
+                length: 12
+            }
+        }
+    ]
+};
+humOption = {
+    tooltip : {
+        formatter: "{a} <br/>{b} : {c}%"
+    },
+    textStyle:{color:'#fff'},
+    series: [
+        {
+            name: '业务指标',
+            type: 'gauge',
+            title: {
+                offsetCenter:[0,-25],
+                color:'#fff'
+            },
+
+            detail: {formatter:'{value}%',
+                fontSize: 15},
+            data: [{value: 60, name: '湿度'}],
+            axisLine: {
+                lineStyle: {
+                    width:7
+                }
+            },
+            axisTick:{
+                length: 5
+            },
+            radius: '85%',
+            pointer: {
+                length: 40,
+                width: 3
+            },
+            splitLine: {
+                length: 12
+            }
+        }
+
+    ]
+};
+
+optionBar = {
+    xAxis: {
+        splitLine: {
+            show: true,
+            lineStyle: {
+                color: 'rgba(43,46,56,0.8)'
+            }
+        },
+        type: 'category',
+        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun','Mon', 'Tue', 'Wed', 'Thu', 'Fri',  'Wed', 'Thu', 'Fri', 'Sat', 'Sun','Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+    },
+    grid: {
+        top:'13%',
+        left: '3%',
+        right: '4%',
+        bottom: '8%',
+        containLabel: true},
+    textStyle:{color:'#fff'},
+    yAxis: {
+        type: 'value',
+        boundaryGap: ['20%', '20%'],
+        splitLine: {
+            show: true,
+            lineStyle:{
+                color:'rgba(43,46,56,0.8)'}},
+        scale:true},
+
+    series: [{
+        data: [120, 200, 150, 80, 70, 110, 130,120, 200, 150, 80, 70, 110, 130,120, 200, 150, 80, 70, 110, 130, 70, 110, 130],
+        type: 'bar'
+    }]
+};
+
+optionPie = {
+    title : {
+        text: '同名数量统计',
+
+        x:'center',
+        textStyle:{
+            color:'#fff'}
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a} <br/>{b} : {c} ({d}%)",
+        textStyle:{
+            color:'#fff'}
+    },
+    label: {
+        color:'#fff'
+    },
+    legend: {
+        type: 'scroll',
+        orient: 'horizontal',
+        right: 10,
+        left:10,
+        bottom: 13,
+        data: data.legendData,
+        tooltip:{
+            textStyle:{
+                color:'#fff'}
+        },
+        selected: data.selected,
+        textStyle:{
+            color:'#fff'}
+
+    },
+    series : [
+        {
+            name: '姓名',
+            type: 'pie',
+            radius : '55%',
+            center: ['50%', '48%'],
+            data: data.seriesData,
+            itemStyle: {
+                emphasis: {
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }
+    ]
+};
+
+
+function genData(count) {
+    var nameList = [
+        '赵', '钱', '孙', '李', '周', '吴', '郑', '王', '冯', '陈', '褚', '卫', '蒋', '沈', '韩', '杨', '朱', '秦', '尤', '许', '何', '吕', '施', '张', '孔', '曹', '严', '华', '金', '魏', '陶', '姜', '戚', '谢', '邹', '喻', '柏', '水', '窦', '章', '云', '苏', '潘', '葛', '奚', '范', '彭', '郎', '鲁', '韦', '昌', '马', '苗', '凤', '花', '方', '俞', '任', '袁', '柳', '酆', '鲍', '史', '唐', '费', '廉', '岑', '薛', '雷', '贺', '倪', '汤', '滕', '殷', '罗', '毕', '郝', '邬', '安', '常', '乐', '于', '时', '傅', '皮', '卞', '齐', '康', '伍', '余', '元', '卜', '顾', '孟', '平', '黄', '和', '穆', '萧', '尹', '姚', '邵', '湛', '汪', '祁', '毛', '禹', '狄', '米', '贝', '明', '臧', '计', '伏', '成', '戴', '谈', '宋', '茅', '庞', '熊', '纪', '舒', '屈', '项', '祝', '董', '梁', '杜', '阮', '蓝', '闵', '席', '季', '麻', '强', '贾', '路', '娄', '危'
+    ];
+    var legendData = [];
+    var seriesData = [];
+    var selected = {};
+    for (var i = 0; i < 50; i++) {
+        var name = Math.random() > 0.65
+            ? makeWord(4, 1) + '·' + makeWord(3, 0)
+            : makeWord(2, 1);
+        legendData.push(name);
+        seriesData.push({
+            name: name,
+            value: Math.round(Math.random() * 100000)
+        });
+        selected[name] = i < 6;
+    }
+
+    return {
+        legendData: legendData,
+        seriesData: seriesData,
+        selected: selected
+    };
+
+    function makeWord(max, min) {
+        var nameLen = Math.ceil(Math.random() * max + min);
+        var name = [];
+        for (var i = 0; i < nameLen; i++) {
+            name.push(nameList[Math.round(Math.random() * nameList.length - 1)]);
+        }
+        return name.join('');
+    }
+}
+
+setInterval(function () {
+    $.ajax({
+        type: "POST",
+        url: "left_workshop/queryByParams",
+        success: function(msg){
+            msg.forEach(function(item,index){
+                var now = new Date(item.timestamp);
+                data1.shift();
+                data1.push({name:now.toString(),
+                    value: [[now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/')+" "+[now.getHours(), now.getMinutes(), (now.getSeconds()<10?"0"+now.getSeconds():now.getSeconds())].join(':'),item.voltage_a]});
+            })
+            console.info(data1);
+        }
+    })
+
+    myChart1.setOption({
+        series: [{
+            data: data1
+        }]
+    });
+    humOption.series[0].data[0].value = (Math.random() * 3+60).toFixed(2) - 0;
+    tempOption.series[0].data[0].value = (Math.random() * 2+25).toFixed(2) - 0;
+
+    humChart.setOption(humOption,true);
+    tempChart.setOption(tempOption,true);
+    myChart1.resize();
+
+}, 3000);
+
+window.addEventListener('resize',function(){
+    myChart1.resize();
+    echartsPie.resize();
+    echartsBar.resize();
+    tempChart.resize();
+    humChart.resize();
+})
+function resizefun12(){
+    console.info(34);
+    myChart1.resize();
+    echartsPie.resize();
+    echartsBar.resize();
+    tempChart.resize();
+    humChart.resize();
+}
+
+</script>
+</body>
+</html>
